@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Koyee Korean Cafe & Cuisine | Menu</title>
+
+<meta
+  name="description"
+  content="Koyee Korean Cafe & Cuisine bilingual English and Arabic digital menu in Al Khobar, Saudi Arabia."
+>
+
+<style>
+
+/* =========================================================
+   COLORS / GLOBAL
+========================================================= */
+
+:root{
+  --black:#171717;
+  --red:#b51e2b;
+  --cream:#f7f5f1;
+  --gray:#6f6f6f;
+  --border:#e7e3dd;
+  --white:#ffffff;
+  --shadow:0 15px 40px rgba(0,0,0,.09);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  color:var(--black);
+  background:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+html[dir="rtl"] body{
+  font-family:Tahoma,Arial,sans-serif;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  max-width:100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  max-width:1200px;
+  min-height:78px;
+
+  margin:auto;
+  padding:10px 20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo img{
+  width:175px;
+  display:block;
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCH
+========================================================= */
+
+.language{
+  display:flex;
+  gap:3px;
+
+  padding:4px;
+
+  border-radius:999px;
+  background:#f1f0ed;
+}
+
+.language button{
+  border:0;
+  background:transparent;
+
+  color:#666;
+  font-weight:800;
+
+  padding:10px 17px;
+  border-radius:999px;
+}
+
+.language button.active{
+  color:#fff;
+  background:#171717;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:420px;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  background:#fafafa;
+
+  border-bottom:1px solid var(--border);
+}
+
+.hero-pattern{
+  position:absolute;
+
+  top:-90px;
+  left:-80px;
+
+  width:500px;
+
+  opacity:.08;
+
+  pointer-events:none;
+}
+
+html[dir="rtl"] .hero-pattern{
+  left:auto;
+  right:-80px;
+
+  transform:scaleX(-1);
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:1200px;
+
+  margin:auto;
+  padding:70px 20px;
+}
+
+.hero-label{
+  margin-bottom:15px;
+
+  color:var(--red);
+
+  font-size:13px;
+  font-weight:900;
+
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  max-width:760px;
+
+  margin:0;
+
+  font-size:clamp(48px,7vw,88px);
+  line-height:.94;
+
+  letter-spacing:-4px;
+}
+
+html[dir="rtl"] .hero h1{
+  letter-spacing:0;
+  line-height:1.2;
+}
+
+.hero p{
+  max-width:620px;
+
+  margin:24px 0 0;
+
+  color:#666;
+
+  font-size:16px;
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   CATEGORY BAR
+========================================================= */
+
+.category-bar{
+  position:sticky;
+  top:78px;
+
+  z-index:900;
+
+  background:#fff;
+
+  border-bottom:1px solid var(--border);
+}
+
+.category-shell{
+  max-width:1260px;
+
+  margin:auto;
+  padding:10px 12px;
+
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr) 42px;
+
+  align-items:center;
+  gap:7px;
+}
+
+.categories{
+  min-width:0;
+
+  display:flex;
+  gap:8px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+
+  padding:2px;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.category-btn{
+  flex:0 0 auto;
+
+  border:1px solid var(--border);
+
+  background:#fff;
+  color:#333;
+
+  border-radius:999px;
+
+  padding:10px 16px;
+
+  font-size:13px;
+  font-weight:800;
+
+  white-space:nowrap;
+}
+
+.category-btn:hover,
+.category-btn.active{
+  color:#fff;
+  background:var(--red);
+  border-color:var(--red);
+}
+
+
+/* CATEGORY SCROLL ARROWS */
+
+.category-arrow{
+  width:40px;
+  height:40px;
+
+  border:1px solid var(--border);
+  border-radius:50%;
+
+  background:white;
+  color:#222;
+
+  display:grid;
+  place-items:center;
+
+  font-size:25px;
+  font-weight:bold;
+
+  line-height:1;
+
+  box-shadow:0 3px 10px rgba(0,0,0,.06);
+}
+
+.category-arrow:hover{
+  color:white;
+  background:var(--red);
+  border-color:var(--red);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+main{
+  max-width:1200px;
+
+  margin:auto;
+  padding:42px 20px 90px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.toolbar{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  gap:25px;
+
+  margin-bottom:45px;
+}
+
+.toolbar-title{
+  font-size:25px;
+  font-weight:900;
+}
+
+.toolbar-subtitle{
+  margin-top:5px;
+
+  color:#777;
+
+  font-size:13px;
+}
+
+.search{
+  width:min(100%,380px);
+
+  padding:14px 18px;
+
+  border:1px solid var(--border);
+  border-radius:999px;
+
+  background:#fafafa;
+
+  outline:none;
+}
+
+.search:focus{
+  border-color:var(--red);
+
+  box-shadow:
+    0 0 0 3px rgba(181,30,43,.08);
+}
+
+
+/* =========================================================
+   MENU SECTION
+========================================================= */
+
+.section{
+  margin-bottom:72px;
+
+  scroll-margin-top:165px;
+}
+
+.section-heading{
+  margin-bottom:23px;
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:flex-end;
+
+  gap:20px;
+}
+
+.section-heading h2{
+  margin:0;
+
+  font-size:clamp(29px,4vw,42px);
+}
+
+.section-heading span{
+  color:#888;
+
+  font-size:13px;
+}
+
+.menu-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:20px;
+}
+
+
+/* =========================================================
+   DISH CARDS
+========================================================= */
+
+.card{
+  overflow:hidden;
+
+  min-height:235px;
+
+  display:grid;
+
+  grid-template-columns:
+    220px minmax(0,1fr);
+
+  background:white;
+
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  transition:.2s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+
+  box-shadow:var(--shadow);
+}
+
+.card-image{
+  min-height:235px;
+
+  overflow:hidden;
+
+  background:#f2f2f2;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+
+  min-height:235px;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+.card-content{
+  padding:21px;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.card-top{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:flex-start;
+
+  gap:14px;
+}
+
+.card h3{
+  margin:0;
+
+  font-size:18px;
+  line-height:1.35;
+}
+
+.price{
+  color:var(--red);
+
+  font-size:14px;
+  font-weight:900;
+
+  line-height:1.45;
+
+  text-align:end;
+
+  white-space:pre-line;
+}
+
+.description{
+  margin:12px 0 15px;
+
+  color:#686868;
+
+  font-size:13px;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   BBQ SET - SPECIAL FULL IMAGE FIX
+========================================================= */
+
+.featured-card{
+  grid-column:1 / -1;
+
+  grid-template-columns:
+    minmax(420px,56%) minmax(280px,44%);
+
+  min-height:360px;
+}
+
+.featured-card .card-image{
+  min-height:360px;
+
+  background:#eef1f3;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.featured-card .card-image img{
+  width:100%;
+  height:100%;
+
+  min-height:360px;
+
+  object-fit:contain;
+
+  background:#eef1f3;
+}
+
+.featured-card .card-content{
+  padding:32px;
+  justify-content:center;
+}
+
+.featured-card h3{
+  font-size:25px;
+}
+
+
+/* =========================================================
+   CALORIES / NOTES / MENU INDICATORS
+========================================================= */
+
+.meta{
+  margin-top:auto;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  align-items:center;
+
+  gap:7px;
+}
+
+.badge{
+  display:inline-block;
+
+  padding:6px 9px;
+
+  border-radius:999px;
+
+  background:var(--cream);
+
+  color:#555;
+
+  font-size:11px;
+  font-weight:800;
+}
+
+.badge.special{
+  color:var(--red);
+
+  background:#fff0f1;
+}
+
+.menu-indicators{
+  width:auto;
+  height:31px;
+
+  max-width:175px;
+
+  display:block;
+
+  margin-top:6px;
+
+  object-fit:contain;
+  object-position:left center;
+}
+
+html[dir="rtl"] .menu-indicators{
+  object-position:right center;
+}
+
+
+/* =========================================================
+   INFORMATION SECTIONS
+========================================================= */
+
+.info{
+  margin-top:55px;
+
+  padding:38px;
+
+  background:var(--cream);
+
+  border-radius:28px;
+}
+
+.info h2{
+  margin-top:0;
+
+  font-size:31px;
+}
+
+.info p{
+  color:#5e5e5e;
+
+  line-height:1.85;
+}
+
+.info-with-photo{
+  display:grid;
+
+  grid-template-columns:
+    1fr 340px;
+
+  gap:35px;
+
+  align-items:center;
+}
+
+.info-photo{
+  width:100%;
+  height:260px;
+
+  object-fit:cover;
+
+  border-radius:20px;
+}
+
+
+/* =========================================================
+   SERVICE PROMISE
+========================================================= */
+
+.promise-grid{
+  margin-top:22px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:14px;
+}
+
+.promise{
+  padding:20px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+  border-radius:18px;
+
+  line-height:1.65;
+}
+
+.promise strong{
+  display:block;
+
+  margin-bottom:10px;
+}
+
+.promise span{
+  color:#636363;
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   ORIGINAL FOOD ALLERGEN GUIDE
+========================================================= */
+
+.allergen-guide{
+  background:white;
+
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  padding:18px;
+
+  margin-top:22px;
+}
+
+.allergen-guide img{
+  display:block;
+
+  width:100%;
+  max-width:950px;
+
+  height:auto;
+
+  margin:auto;
+
+  object-fit:contain;
+
+  background:white;
+
+  border-radius:14px;
+}
+
+.allergen-guide-note{
+  text-align:center;
+
+  color:#777;
+
+  font-size:12px;
+
+  margin-top:13px;
+}
+
+
+/* FALLBACK IF SCREENSHOT FILE IS MISSING */
+
+.allergen-fallback{
+  display:none;
+
+  grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+  gap:10px;
+
+  margin-top:20px;
+}
+
+.allergen-fallback div{
+  padding:13px;
+
+  background:white;
+
+  border:1px solid var(--border);
+  border-radius:14px;
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:55px 20px;
+
+  color:#fff;
+
+  background:#151515;
+}
+
+.footer-inner{
+  max-width:1200px;
+
+  margin:auto;
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:flex-end;
+
+  gap:35px;
+}
+
+.footer-logo{
+  width:180px;
+
+  display:block;
+
+  filter:brightness(0) invert(1);
+}
+
+.footer-tag{
+  margin-top:14px;
+}
+
+.footer-text{
+  color:#bbb;
+
+  font-size:14px;
+  line-height:1.8;
+}
+
+.footer-text a{
+  color:#fff;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   EMPTY SEARCH
+========================================================= */
+
+.empty{
+  padding:60px 20px;
+
+  color:#888;
+
+  text-align:center;
+
+  border:1px dashed var(--border);
+  border-radius:20px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px){
+
+  .menu-grid{
+    grid-template-columns:1fr;
+  }
+
+  .featured-card{
+    grid-template-columns:
+      minmax(350px,52%) minmax(0,48%);
+  }
+
+  .promise-grid{
+    grid-template-columns:1fr;
+  }
+
+  .info-with-photo{
+    grid-template-columns:1fr;
+  }
+
+  .info-photo{
+    height:300px;
+  }
+
+  .allergen-fallback{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:640px){
+
+  .header-inner{
+    min-height:68px;
+  }
+
+  .logo img{
+    width:125px;
+  }
+
+  .language button{
+    padding:8px 11px;
+
+    font-size:12px;
+  }
+
+  .category-bar{
+    top:68px;
+  }
+
+  .category-shell{
+    grid-template-columns:minmax(0,1fr);
+
+    padding:10px 12px;
+  }
+
+  .category-arrow{
+    display:none;
+  }
+
+  .hero{
+    min-height:345px;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  .toolbar{
+    flex-direction:column;
+
+    align-items:stretch;
+  }
+
+  .search{
+    width:100%;
+  }
+
+  .card,
+  .featured-card{
+    display:block;
+  }
+
+  .card-image{
+    height:245px;
+  }
+
+  .card-image img{
+    height:245px;
+    min-height:245px;
+  }
+
+  .featured-card .card-image{
+    height:auto;
+    min-height:0;
+
+    padding:0;
+  }
+
+  .featured-card .card-image img{
+    width:100%;
+    height:auto;
+
+    min-height:0;
+
+    object-fit:contain;
+  }
+
+  .featured-card .card-content{
+    padding:21px;
+  }
+
+  .featured-card h3{
+    font-size:20px;
+  }
+
+  .info{
+    padding:25px 18px;
+  }
+
+  .allergen-fallback{
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+  <div class="header-inner">
+
+    <div class="logo">
+
+      <img
+        src="images/image1.jpeg"
+        alt="Koyee Korean Cafe & Cuisine"
+      >
+
+    </div>
+
+
+    <div class="language">
+
+      <button
+        id="enBtn"
+        class="active"
+        onclick="setLanguage('en')"
+      >
+        English
+      </button>
+
+      <button
+        id="arBtn"
+        onclick="setLanguage('ar')"
+      >
+        العربية
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+  <img
+    class="hero-pattern"
+    src="images/image5.png"
+    alt=""
+  >
+
+
+  <div class="hero-inner">
+
+    <div
+      class="hero-label"
+      data-text="label"
+    >
+      Korean Cafe & Cuisine
+    </div>
+
+
+    <h1 data-text="heroTitle">
+      Healthy Korean Dining.
+    </h1>
+
+
+    <p data-text="heroText"></p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CATEGORY SCROLL BAR
+====================================================== -->
+
+<nav class="category-bar">
+
+  <div class="category-shell">
+
+
+    <button
+      class="category-arrow"
+      type="button"
+      onclick="scrollCategories(-1)"
+      aria-label="Scroll categories left"
+    >
+      ‹
+    </button>
+
+
+    <div
+      id="categories"
+      class="categories"
+    ></div>
+
+
+    <button
+      class="category-arrow"
+      type="button"
+      onclick="scrollCategories(1)"
+      aria-label="Scroll categories right"
+    >
+      ›
+    </button>
+
+
+  </div>
+
+</nav>
+
+
+
+<!-- ======================================================
+     MAIN
+====================================================== -->
+
+<main>
+
+
+  <!-- MENU TOOLBAR -->
+
+  <div class="toolbar">
+
+    <div>
+
+      <div
+        class="toolbar-title"
+        data-text="menuTitle"
+      >
+        Explore our menu
+      </div>
+
+
+      <div
+        class="toolbar-subtitle"
+        data-text="menuSubtitle"
+      ></div>
+
+    </div>
+
+
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="Search menu..."
+      oninput="renderMenu()"
+    >
+
+  </div>
+
+
+
+  <!-- MENU -->
+
+  <div id="menu"></div>
+
+
+
+  <!-- ==================================================
+       HEALTH
+  ================================================== -->
+
+  <section class="info info-with-photo">
+
+    <div>
+
+      <h2 data-text="healthTitle"></h2>
+
+      <p data-text="healthText"></p>
+
+    </div>
+
+
+    <img
+      class="info-photo"
+      src="images/image47.jpeg"
+      alt="Kimchi"
+    >
+
+  </section>
+
+
+
+  <!-- ==================================================
+       SERVICE PROMISE
+  ================================================== -->
+
+  <section class="info">
+
+    <h2 data-text="promiseTitle"></h2>
+
+
+    <div class="promise-grid">
+
+
+      <div class="promise">
+
+        <strong data-text="promise1Title"></strong>
+
+        <span data-text="promise1Text"></span>
+
+      </div>
+
+
+      <div class="promise">
+
+        <strong data-text="promise2Title"></strong>
+
+        <span data-text="promise2Text"></span>
+
+      </div>
+
+
+      <div class="promise">
+
+        <strong data-text="promise3Title"></strong>
+
+        <span data-text="promise3Text"></span>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       ORIGINAL MENU ALLERGEN GUIDE
+  ================================================== -->
+
+  <section class="info">
+
+    <h2 data-text="allergenTitle"></h2>
+
+    <p data-text="allergenText"></p>
+
+
+    <div class="allergen-guide">
+
+      <img
+        id="allergenGuideImage"
+        src="images/allergens-en.png"
+        alt="Koyee Food Allergen Guide"
+        onerror="showAllergenFallback()"
+      >
+
+
+      <div
+        class="allergen-guide-note"
+        data-text="allergenGuideNote"
+      ></div>
+
+
+      <div
+        id="allergenFallback"
+        class="allergen-fallback"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <img
+        class="footer-logo"
+        src="images/image1.jpeg"
+        alt="Koyee"
+      >
+
+
+      <div
+        class="footer-tag"
+        data-text="footerSlogan"
+      ></div>
+
+    </div>
+
+
+
+    <div class="footer-text">
+
+      <div data-text="address"></div>
+
+
+      <div>
+
+        <a href="tel:+966138337888">
+          +966 13 833 7888
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+
+/* =========================================================
+   WEBSITE TEXT
+========================================================= */
+
+const text = {
+
+
+en:{
+
+  label:
+    "Korean Cafe & Cuisine",
+
+  heroTitle:
+    "Healthy Korean Dining.",
+
+  heroText:
+    "Experience the art of Korean food through sharing, balance, warmth and carefully prepared dishes.",
+
+  menuTitle:
+    "Explore our menu",
+
+  menuSubtitle:
+    "Select a category or search for a dish.",
+
+  search:
+    "Search menu...",
+
+  healthTitle:
+    "Why Korean Food is Good For Health",
+
+  healthText:
+    "Korean food for one meal is usually composed of rice or noodles with several side dishes and soups or stews. Side dishes and stews are made of different vegetables marinated or flavored with gochujang, doenjang, garlic, onion, green onion, soybean sauce and more. Eating these foods together provides a variety of nutrients. Many ingredients are fermented and add depth of flavor and nutritional value.",
+
+  promiseTitle:
+    "Koyee's Signature Service Promise",
+
+  promise1Title:
+    "Pressure-Cooked Rice",
+
+  promise1Text:
+    "Though it is a more demanding method, Koyee uses Korean pressure rice cookers to create fluffy rice and the rich, golden nurungji crust that defines Korean comfort.",
+
+  promise2Title:
+    "Fresh Frying Oil, Always",
+
+  promise2Text:
+    "We maintain oil freshness by checking its quality regularly, helping every fried dish remain light, crisp and clean tasting.",
+
+  promise3Title:
+    "Made by Hand, Not from a Factory",
+
+  promise3Text:
+    "We prepare our sauces, side dishes and ingredients in-house. No heavily processed or factory-made shortcuts.",
+
+  allergenTitle:
+    "Food Allergens",
+
+  allergenText:
+    "Please inform the restaurant about any food allergy before ordering. The colored symbols beside dishes follow the indicators used in the original Koyee menu.",
+
+  allergenGuideNote:
+    "Original Koyee allergen guide.",
+
+  footerSlogan:
+    "Made in Korea. Loved in Saudi.",
+
+  address:
+    "Villaggio Restaurants Village, Al Khobar, Saudi Arabia",
+
+  all:
+    "All",
+
+  items:
+    "items"
+
+},
+
+
+
+ar:{
+
+  label:
+    "مقهى ومأكولات كورية",
+
+  heroTitle:
+    "استمتع بفن المأكولات الكورية الصحية",
+
+  heroText:
+    "المطبخ الكوري أكثر من مجرد طعام؛ فهو مشاركة وتوازن ودفء. استمتع بتجربة كويي بنكهات كورية أصيلة.",
+
+  menuTitle:
+    "استكشف قائمة كويي",
+
+  menuSubtitle:
+    "اختر القسم أو ابحث عن طبق.",
+
+  search:
+    "ابحث في القائمة...",
+
+  healthTitle:
+    "لماذا يُعد الطعام الكوري مفيداً للصحة",
+
+  healthText:
+    "تتكون الوجبة الكورية عادةً من الأرز أو النودلز مع عدة أطباق جانبية وحساء أو يخنة. تُحضّر الأطباق الجانبية واليخنات من خضروات متنوعة ومنكهة بالغوتشوجانغ والدوينجانغ والثوم والبصل والبصل الأخضر وصلصة الصويا وغيرها. وعند تناول هذه الأصناف معاً نحصل على عناصر غذائية متنوعة. كما أن كثيراً من المكونات الكورية مخمّرة وتضيف عمقاً للنكهة وقيمة غذائية.",
+
+  promiseTitle:
+    "وعد كويي المميز للخدمة",
+
+  promise1Title:
+    "أرز مطهو بقدر الضغط",
+
+  promise1Text:
+    "رغم أنها طريقة تتطلب جهداً أكبر، نستخدم قدور ضغط كورية لطهي الأرز للحصول على أرز هش وقشرة نورونغجي ذهبية غنية.",
+
+  promise2Title:
+    "زيت قلي طازج دائماً",
+
+  promise2Text:
+    "نحافظ على طزاجة الزيت من خلال متابعة جودته لضمان أن يكون كل طبق مقلي خفيفاً ومقرمشاً.",
+
+  promise3Title:
+    "يُحضّر يدوياً، لا في المصانع",
+
+  promise3Text:
+    "نحضّر صلصاتنا وأطباقنا الجانبية ومكوناتنا داخل المطعم دون الاعتماد على الأطعمة شديدة المعالجة.",
+
+  allergenTitle:
+    "مسببات الحساسية",
+
+  allergenText:
+    "يرجى إبلاغ المطعم بأي حساسية غذائية قبل الطلب. الرموز الملونة بجانب الأطباق تتبع المؤشرات المستخدمة في قائمة كويي الأصلية.",
+
+  allergenGuideNote:
+    "دليل مسببات الحساسية الأصلي من كويي.",
+
+  footerSlogan:
+    "صُنع في كوريا بحب سعودي",
+
+  address:
+    "قرية مطاعم فيلاجيو، الخبر، المملكة العربية السعودية",
+
+  all:
+    "الكل",
+
+  items:
+    "أطباق"
+
+}
+
+};
+
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+const categoryData = [
+
+{ id:"bbq-set", en:"BBQ Set", ar:"مجموعة الشواء" },
+
+{ id:"bbq", en:"BBQ A La Carte", ar:"الشواء حسب الطلب" },
+
+{ id:"appetizers", en:"Appetizers", ar:"المقبلات" },
+
+{ id:"snacks", en:"Snacks", ar:"الوجبات الخفيفة" },
+
+{ id:"noodles", en:"Noodles", ar:"النودلز" },
+
+{ id:"rice", en:"Rice", ar:"الأرز" },
+
+{ id:"chicken", en:"Chicken", ar:"الدجاج" },
+
+{ id:"beef", en:"Beef with Rice", ar:"لحم بقري مع الأرز" },
+
+{ id:"soup", en:"Soup & Stew with Rice", ar:"الحساء واليخنة مع الأرز" },
+
+{ id:"dessert", en:"Dessert & Beverage", ar:"الحلويات والمشروبات" },
+
+{ id:"bakery", en:"Bakery Cafe", ar:"مقهى ومخبز" },
+
+{ id:"cakes", en:"Cakes", ar:"الكعكات" }
+
+];
+
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+const menuData = [
+
+
+/* BBQ SET */
+
+{
+  category:"bbq-set",
+  image:"images/image9.jpeg",
+
+  name:{
+    en:"Combination of Wagyu",
+    ar:"تشكيلة من لحم الواغيو"
+  },
+
+  price:"300 SAR",
+
+  note:{
+    en:"400g • Recommended for 2 persons",
+    ar:"400غ • موصى بها لشخصين"
+  },
+
+  description:{
+    en:"Combination of Wagyu brisket, ribeye and Wagyu outside skirt. Provided with Koyee Salad or Pamuchim, lettuce and Korean BBQ pastes with condiments.",
+    ar:"تشكيلة من صدر بقري وريب آي وواغيو أوتسايد سكيرت. تُقدم مع سلطة كويي أو باموتشيم والخس وصلصات الشواء الكورية مع التوابل."
+  }
+},
+
+
+
+/* BBQ A LA CARTE */
+
+{
+  category:"bbq",
+  image:"images/image10.jpeg",
+
+  name:{ en:"Wagyu Brisket", ar:"صدر واغيو" },
+
+  price:"65 SAR",
+
+  note:{ en:"100g", ar:"100غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image11.jpeg",
+
+  name:{ en:"Wagyu Ribeye", ar:"ريب آي واغيو" },
+
+  price:"90 SAR",
+
+  note:{ en:"100g", ar:"100غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image12.jpeg",
+
+  name:{ en:"Wagyu Outside Skirt", ar:"واغيو أوتسايد سكيرت" },
+
+  price:"90 SAR",
+
+  note:{ en:"100g", ar:"100غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image14.jpeg",
+  indicator:"images/image17.jpeg",
+
+  name:{ en:"Wang Galbi", ar:"وانغ غالبي" },
+
+  price:"180 SAR",
+
+  note:{ en:"300g", ar:"300غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image15.jpeg",
+  indicator:"images/image18.jpeg",
+
+  name:{ en:"Wagyu Bulgogi", ar:"بولغوغي واغيو" },
+
+  price:"110 SAR",
+
+  note:{ en:"200g", ar:"200غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image16.jpeg",
+  indicator:"images/image19.jpeg",
+
+  name:{ en:"Chicken Bulgogi", ar:"بولغوغي الدجاج" },
+
+  price:"70 SAR",
+
+  note:{ en:"200g", ar:"200غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image20.jpeg",
+  indicator:"images/image21.jpeg",
+
+  name:{ en:"Prawn", ar:"روبيان" },
+
+  price:"80 SAR",
+
+  note:{ en:"100g", ar:"100غ" }
+},
+
+{
+  category:"bbq",
+  image:"images/image22.jpeg",
+
+  name:{ en:"Pamuchim", ar:"باموتشيم" },
+
+  price:"10 SAR"
+},
+
+{
+  category:"bbq",
+  image:"images/image23.jpeg",
+
+  name:{ en:"Sotbab", ar:"سوتباب" },
+
+  price:"10 SAR"
+},
+
+{
+  category:"bbq",
+  image:"images/image13.jpeg",
+
+  name:{ en:"Plain Rice", ar:"أرز أبيض" },
+
+  price:"5 SAR"
+},
+
+
+
+/* APPETIZERS */
+
+{
+  category:"appetizers",
+  image:"images/image25.jpeg",
+
+  name:{ en:"Koyee Salad", ar:"سلطة كويي" },
+
+  price:"40 SAR",
+  calories:"110 kcal",
+
+  description:{
+    en:"A fresh mix of crisp lettuce, tomatoes and seasonal greens served with a light dressing. Add tofu, chicken or boiled egg for 10 SAR each.",
+    ar:"مزيج طازج من الخس المقرمش والطماطم والخضروات الموسمية، يُقدم مع صلصة خفيفة. يمكن إضافة التوفو أو الدجاج أو البيض المسلوق مقابل 10 SAR."
+  }
+},
+
+{
+  category:"appetizers",
+  image:"images/image28.jpeg",
+  indicator:"images/image29.jpeg",
+
+  name:{ en:"Gyeran-jjim", ar:"غيران جيم" },
+
+  price:"20 SAR",
+  calories:"159 kcal",
+
+  description:{
+    en:"A soft, custard-like Korean steamed egg, gently seasoned for a warm and comforting flavor.",
+    ar:"بيض كوري طري بقوام الكاسترد، متبل بلطف لنكهة دافئة ومريحة."
+  }
+},
+
+{
+  category:"appetizers",
+  image:"images/image26.jpeg",
+  indicator:"images/image27.jpeg",
+
+  name:{ en:"Kimchi Jeon", ar:"كيمتشي جون" },
+
+  price:"50 SAR",
+  calories:"410 kcal",
+
+  description:{
+    en:"Korean pancake made with well-fermented kimchi in a light batter. Crisp outside and soft inside.",
+    ar:"فطيرة كورية محضرة من كيمتشي مخمر جيداً مع خليط خفيف؛ مقرمشة من الخارج وطرية من الداخل."
+  }
+},
+
+{
+  category:"appetizers",
+  image:"images/image30.jpeg",
+  indicator:"images/image31.jpeg",
+
+  name:{ en:"Seafood Pajeon", ar:"باجون بالمأكولات البحرية" },
+
+  price:"60 SAR",
+  calories:"520 kcal",
+
+  description:{
+    en:"Korean pancake filled with fresh seafood and spring onions, crispy around the edges and tender inside.",
+    ar:"فطيرة كورية بالمأكولات البحرية الطازجة والبصل الأخضر، مقرمشة عند الأطراف وطرية من الداخل."
+  }
+},
+
+
+
+/* SNACKS */
+
+{
+  category:"snacks",
+  image:"images/image32.jpeg",
+  indicator:"images/image33.jpeg",
+
+  name:{ en:"Tteokbokki with Fries", ar:"توكبوكي مع البطاطس المقلية" },
+
+  price:"70 SAR",
+  calories:"570 kcal",
+
+  description:{
+    en:"Spicy Korean rice cakes stir-fried in a sweet and savory Korean chili paste sauce with fish cake and boiled egg.",
+    ar:"كعكات أرز كورية حارة مقلية بصلصة الفلفل الكوري الحلوة والمالحة مع كعكة السمك والبيض المسلوق."
+  }
+},
+
+{
+  category:"snacks",
+  image:"images/image34.jpeg",
+
+  name:{ en:"Gimbab", ar:"غيمباب" },
+
+  price:"45 / 55 SAR",
+  calories:"550 kcal",
+
+  note:{
+    en:"Regular 45 • Tuna/Bulgogi 55 • Comes with Miso Soup",
+    ar:"عادي 45 • تونة/بولغوغي 55 • يُقدم مع حساء الميسو"
+  },
+
+  description:{
+    en:"Seasoned rice with fresh vegetables and savory filling wrapped in seaweed.",
+    ar:"أرز متبل مع خضروات طازجة وحشوة شهية ملفوفة بالأعشاب البحرية."
+  }
+},
+
+
+
+/* NOODLES */
+
+{
+  category:"noodles",
+  image:"images/image36.jpeg",
+  indicator:"images/image37.jpeg",
+
+  name:{ en:"Jjamppong", ar:"جامبونغ" },
+
+  price:"70 / 80 SAR",
+  calories:"638 kcal",
+
+  note:{
+    en:"Beef 70 • Combo 80 • Non-Spicy Chicken 70",
+    ar:"لحم بقري 70 • مشكل 80 • دجاج غير حار 70"
+  },
+
+  description:{
+    en:"A rich, spicy Korean noodle broth with seafood, beef and vegetables.",
+    ar:"مرق غني وحار مع مأكولات بحرية ولحم بقري وخضروات ونودلز."
+  }
+},
+
+{
+  category:"noodles",
+  image:"images/image38.jpeg",
+  indicator:"images/image40.jpeg",
+
+  name:{ en:"Gan-Jjajang", ar:"غان جاجانغ" },
+
+  price:"60 / 70 SAR",
+  calories:"752 kcal",
+
+  note:{
+    en:"Beef 60 • Combo 70",
+    ar:"لحم بقري 60 • مشكل 70"
+  },
+
+  description:{
+    en:"Fresh house-made noodles stir-fried with rich black bean sauce, beef and vegetables.",
+    ar:"نودلز طازجة محضرة مع صلصة الفاصوليا السوداء واللحم البقري والخضروات."
+  }
+},
+
+{
+  category:"noodles",
+  image:"images/image39.jpeg",
+  indicator:"images/image41.jpeg",
+
+  name:{ en:"Japchae", ar:"جابتشي" },
+
+  price:"60 SAR",
+  calories:"32 kcal",
+
+  description:{
+    en:"Korean stir-fried glass noodles mixed with vegetables and beef in a light soy-based sauce.",
+    ar:"نودلز زجاجية كورية مقلية تُخلط مع الخضروات واللحم البقري بصلصة صويا خفيفة."
+  }
+},
+
+{
+  category:"noodles",
+  image:"images/image42.jpeg",
+  indicator:"images/image43.jpeg",
+
+  name:{ en:"Salad Mak Guk Soo", ar:"سلطة ماك غوك سو" },
+
+  price:"160 SAR",
+  calories:"1139 kcal",
+
+  note:{
+    en:"For 2 people • Spicy / Non-Spicy",
+    ar:"لشخصين • حار / غير حار"
+  },
+
+  description:{
+    en:"A generous platter of chilled buckwheat noodles and fresh vegetables with Koyee special sauce.",
+    ar:"طبق كبير من نودلز الحنطة السوداء المبردة والخضروات الطازجة مع صلصة كويي الخاصة."
+  }
+},
+
+{
+  category:"noodles",
+  image:"images/image44.jpeg",
+  indicator:"images/image43.jpeg",
+
+  name:{ en:"Mul Mak Guk Soo", ar:"موي ماك غوك سو" },
+
+  price:"100 SAR",
+  calories:"715 kcal",
+
+  note:{ en:"Broth", ar:"بالمرق" }
+},
+
+{
+  category:"noodles",
+  image:"images/image45.jpeg",
+  indicator:"images/image43.jpeg",
+
+  name:{ en:"Bibim Mak Guk Soo", ar:"بيبيم ماك غوك سو" },
+
+  price:"100 SAR",
+  calories:"715 kcal",
+
+  note:{ en:"Spicy", ar:"حار" }
+},
+
+
+
+/* RICE */
+
+{
+  category:"rice",
+  image:"images/image49.jpeg",
+  indicator:"images/image52.jpeg",
+
+  name:{ en:"Bibim-Bab", ar:"بيبيمباب" },
+
+  price:"75 SAR",
+  calories:"544 kcal",
+
+  note:{
+    en:"Dolsot or Brass Bowl",
+    ar:"وعاء دولسوت أو نحاسي"
+  },
+
+  description:{
+    en:"Warm rice with vegetables, meat, egg and chili paste served in a hot stone bowl or brass bowl.",
+    ar:"أرز دافئ مع الخضروات واللحم والبيض ومعجون الفلفل، يُقدم في وعاء حجري ساخن أو نحاسي."
+  }
+},
+
+{
+  category:"rice",
+  image:"images/image50.jpeg",
+
+  name:{ en:"Kimchi Fried Rice", ar:"أرز كيمتشي مقلي" },
+
+  price:"55 SAR",
+  calories:"544 kcal",
+
+  description:{
+    en:"Rice stir-fried with kimchi and savory seasonings with beef pieces, topped with a fried egg and served with soup.",
+    ar:"أرز مقلي مع الكيمتشي والتوابل وقطع اللحم البقري، ويُغطى ببيضة مقلية ويُقدم مع الحساء."
+  }
+},
+
+{
+  category:"rice",
+  image:"images/image51.jpeg",
+
+  name:{ en:"Chicken Katsu", ar:"كاتسو الدجاج" },
+
+  price:"70 SAR",
+  calories:"432 kcal",
+
+  description:{
+    en:"Crispy breaded cutlets served over steamed rice with rich curry.",
+    ar:"شرائح مقرمشة مغطاة بالبقسماط تُقدم فوق أرز مطهو بالبخار مع كاري غني."
+  }
+},
+
+
+
+/* CHICKEN */
+
+{
+  category:"chicken",
+  image:"images/image53.jpeg",
+  indicator:"images/image54.jpeg",
+
+  name:{ en:"Dak Galbi Set", ar:"مجموعة داك غالبي" },
+
+  price:"110 SAR",
+  calories:"726 kcal",
+
+  description:{
+    en:"Spicy stir-fried chicken with gochujang, vegetables, soft rice cakes and cheese.",
+    ar:"دجاج حار مع الغوتشوجانغ والخضروات وكعكات الأرز الطرية والجبن."
+  }
+},
+
+{
+  category:"chicken",
+  image:"images/image55.jpeg",
+  indicator:"images/image57.jpeg",
+
+  name:{ en:"Yangyum Chicken", ar:"دجاج يانغيوم" },
+
+  price:"40 / 70 SAR",
+  calories:"1021 kcal",
+
+  note:{
+    en:"6 pcs 40 • 12 pcs 70 • Boneless",
+    ar:"6 قطع 40 • 12 قطعة 70 • منزوع العظم"
+  },
+
+  description:{
+    en:"Crispy Korean fried chicken coated in a sweet, spicy and tangy Korean sauce.",
+    ar:"دجاج كوري مقرمش مغطى بصلصة كورية حلوة وحارة ولاذعة."
+  }
+},
+
+{
+  category:"chicken",
+  image:"images/image56.jpeg",
+  indicator:"images/image58.jpeg",
+
+  name:{ en:"Meh Mill Chicken", ar:"دجاج ميه ميل" },
+
+  price:"50 / 75 SAR",
+  calories:"957 kcal",
+
+  note:{
+    en:"Small 50 • Large 75",
+    ar:"صغير 50 • كبير 75"
+  },
+
+  description:{
+    en:"Golden crispy Korean fried chicken seasoned with buckwheat.",
+    ar:"دجاج كوري مقرمش بنكهة الحنطة السوداء."
+  }
+},
+
+
+
+/* BEEF */
+
+{
+  category:"beef",
+  image:"images/image59.jpeg",
+  indicator:"images/image61.jpeg",
+
+  name:{ en:"Galbi Jjim", ar:"غالبي جيم" },
+
+  price:"110 SAR",
+  calories:"778 kcal",
+
+  description:{
+    en:"Slow-braised beef short ribs in a savory-sweet soy sauce with garlic and vegetables.",
+    ar:"أضلاع بقر قصيرة مطهوة ببطء في صلصة صويا حلوة ومالحة مع الثوم والخضروات."
+  }
+},
+
+{
+  category:"beef",
+  image:"images/image60.jpeg",
+  indicator:"images/image62.jpeg",
+
+  name:{ en:"Grilled Bulgogi Set", ar:"مجموعة بولغوغي مشوي" },
+
+  price:"120 SAR",
+  calories:"824 kcal",
+
+  description:{
+    en:"Thinly sliced beef marinated in a sweet-savory Korean sauce and grilled for a smoky aroma.",
+    ar:"شرائح لحم بقري متبلة بصلصة كورية حلوة ومالحة ومشوية لنكهة مدخنة."
+  }
+},
+
+
+
+/* SOUP & STEW */
+
+{
+  category:"soup",
+  image:"images/image65.jpeg",
+
+  name:{ en:"Kimchi Jjigae", ar:"كيمتشي جيغي" },
+
+  price:"70 SAR",
+  calories:"489 kcal",
+
+  description:{
+    en:"Hearty Korean classic stew.",
+    ar:"يخنة كورية كلاسيكية مشبعة."
+  }
+},
+
+{
+  category:"soup",
+  image:"images/image67.jpeg",
+  indicator:"images/image68.jpeg",
+
+  name:{ en:"Doenjang Jjigae", ar:"دوينجانغ جيغي" },
+
+  price:"70 SAR",
+  calories:"512 kcal",
+
+  description:{
+    en:"Korean soybean paste stew.",
+    ar:"يخنة كورية بمعجون فول الصويا."
+  }
+},
+
+{
+  category:"soup",
+  image:"images/image66.jpeg",
+
+  name:{ en:"Bu Dae Jjigae", ar:"بوداي جيغي" },
+
+  price:"100 SAR",
+  calories:"725 kcal",
+
+  description:{
+    en:"Army-style stew with beef and chicken sausages.",
+    ar:"يخنة عسكرية باللحم البقري ونقانق الدجاج."
+  }
+},
+
+{
+  category:"soup",
+  image:"images/image69.jpeg",
+
+  name:{ en:"Korean Spicy Chicken Stew", ar:"يخنة دجاج كورية حارة" },
+
+  price:"100 SAR",
+  calories:"750 kcal"
+},
+
+{
+  category:"soup",
+  image:"images/image72.jpeg",
+  indicator:"images/image75.jpeg",
+
+  name:{ en:"Galbi Tang", ar:"غالبي تانغ" },
+
+  price:"100 SAR",
+  calories:"672 kcal",
+
+  description:{
+    en:"Tender beef short ribs slowly simmered in a rich Korean broth with vegetables.",
+    ar:"أضلاع بقر قصيرة طرية تُطهى ببطء في مرق كوري غني مع الخضروات."
+  }
+},
+
+{
+  category:"soup",
+  image:"images/image73.jpeg",
+  indicator:"images/image74.jpeg",
+
+  name:{ en:"Yang Tang", ar:"يانغ تانغ" },
+
+  price:"80 SAR",
+  calories:"776 kcal",
+
+  description:{
+    en:"Korean spicy lamb stew.",
+    ar:"يخنة لحم ضأن كورية حارة."
+  }
+},
+
+{
+  category:"soup",
+  image:"images/image76.jpeg",
+  indicator:"images/image77.jpeg",
+
+  name:{ en:"Bangye Tang", ar:"بانغيه تانغ" },
+
+  price:"100 SAR",
+  calories:"698 kcal",
+
+  description:{
+    en:"Half-portion chicken ginseng stew.",
+    ar:"نصف دجاجة مطهية مع الجينسنغ."
+  }
+},
+
+
+
+/* DESSERT */
+
+{
+  category:"dessert",
+  image:"images/image81.jpeg",
+
+  name:{ en:"Korean Mango Bingsu", ar:"بينغسو المانجو الكوري" },
+
+  price:"35 SAR",
+
+  description:{
+    en:"Light, airy and refreshing. Price per serving.",
+    ar:"خفيف ومنعش. السعر للحصة الواحدة."
+  }
+},
+
+{
+  category:"dessert",
+  image:"images/image83.jpeg",
+
+  name:{ en:"Passion Fruit Lemon", ar:"ليمون باشن فروت" },
+
+  price:"25 SAR"
+},
+
+{
+  category:"dessert",
+  image:"images/image84.jpeg",
+
+  name:{ en:"Boba Milk / Brown Boba Milk", ar:"حليب بوبا / حليب بوبا بني" },
+
+  price:"25 SAR"
+},
+
+{
+  category:"dessert",
+  image:"images/image85.jpeg",
+
+  name:{ en:"Coke / Zero / Light • Sprite / Zero", ar:"كوكاكولا / زيرو / لايت • سبرايت / زيرو" },
+
+  price:"10 SAR"
+},
+
+{
+  category:"dessert",
+  image:"images/image85.jpeg",
+
+  name:{ en:"Mineral Water / Sparkling Water", ar:"مياه معدنية / مياه غازية" },
+
+  price:"12 / 25 SAR",
+
+  note:{
+    en:"Small 12 • Large 25",
+    ar:"صغير 12 • كبير 25"
+  }
+},
+
+
+
+/* BAKERY */
+
+{
+  category:"bakery",
+  image:"images/image86.jpeg",
+
+  name:{ en:"Macaron", ar:"ماكرون" },
+
+  price:"8 SAR",
+
+  note:{
+    en:"Each • Order from the counter",
+    ar:"للقطعة • اطلب من الكاونتر"
+  }
+},
+
+{
+  category:"bakery",
+  image:"images/image89.jpeg",
+
+  name:{ en:"Korean Bakery", ar:"مخبوزات كورية" },
+
+  price:"10 SAR",
+
+  note:{
+    en:"Each • Order from the counter",
+    ar:"للقطعة • اطلب من الكاونتر"
+  }
+},
+
+{
+  category:"bakery",
+  image:"images/image90.jpeg",
+
+  name:{ en:"Korean Signature Coffee", ar:"قهوة كويي المميزة" },
+
+  price:"13 SAR"
+},
+
+{
+  category:"bakery",
+  image:"images/image90.jpeg",
+
+  name:{ en:"Hot Americano", ar:"أمريكانو ساخن" },
+
+  price:"13 SAR"
+},
+
+{
+  category:"bakery",
+  image:"images/image90.jpeg",
+
+  name:{ en:"Iced Americano", ar:"أمريكانو مثلج" },
+
+  price:"15 SAR"
+},
+
+{
+  category:"bakery",
+  image:"images/image90.jpeg",
+
+  name:{ en:"Latte", ar:"لاتيه" },
+
+  price:"18 SAR"
+},
+
+
+
+/* CAKES */
+
+{
+  category:"cakes",
+  image:"images/image91.jpeg",
+
+  name:{ en:"Korean Cakes", ar:"كعكات كورية" },
+
+  price:"25 / 100 / 200 SAR",
+
+  note:{
+    en:"Small 25 • Medium 100 • Large 200",
+    ar:"صغيرة 25 • متوسطة 100 • كبيرة 200"
+  }
+},
+
+{
+  category:"cakes",
+  image:"images/image92.jpeg",
+
+  name:{ en:"Birthday Cakes", ar:"كعكات أعياد الميلاد" },
+
+  price:""
+},
+
+{
+  category:"cakes",
+  image:"images/image93.jpeg",
+
+  name:{ en:"Anniversary Cakes", ar:"كعكات المناسبات السنوية" },
+
+  price:""
+},
+
+{
+  category:"cakes",
+  image:"images/image94.jpeg",
+
+  name:{ en:"Special Event Cakes", ar:"كعكات المناسبات الخاصة" },
+
+  price:"",
+
+  description:{
+    en:"Custom cakes are available to order at least 2 days in advance at the counter.",
+    ar:"الكعكات المخصصة متاحة للطلب قبل يومين على الأقل من الكاونتر."
+  }
+}
+
+];
+
+
+
+/* =========================================================
+   FALLBACK ALLERGEN TEXT
+========================================================= */
+
+const allergenData = {
+
+en:[
+  "Cereals containing gluten",
+  "Crustaceans and products",
+  "Fish and products",
+  "Eggs and products",
+  "Peanuts and products",
+  "Mustard and products",
+  "Nuts and products",
+  "Sesame and products",
+  "Milk and products",
+  "Mollusca and products",
+  "Sulphur dioxide / Sulfites",
+  "Lupinus and products",
+  "Celery and products",
+  "Soya and products"
+],
+
+ar:[
+  "الحبوب المحتوية على الغلوتين",
+  "القشريات ومنتجاتها",
+  "الأسماك ومنتجاتها",
+  "البيض ومنتجاته",
+  "الفول السوداني ومنتجاته",
+  "الخردل ومنتجاته",
+  "المكسرات ومنتجاتها",
+  "السمسم ومنتجاته",
+  "الحليب ومنتجاته",
+  "الرخويات ومنتجاتها",
+  "ثاني أكسيد الكبريت / السلفيت",
+  "الترمس ومنتجاته",
+  "الكرفس ومنتجاته",
+  "الصويا ومنتجاتها"
+]
+
+};
+
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let language = "en";
+
+let selectedCategory = "all";
+
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+function setLanguage(lang){
+
+  language = lang;
+
+
+  document.documentElement.lang =
+    lang;
+
+
+  document.documentElement.dir =
+    lang === "ar"
+      ? "rtl"
+      : "ltr";
+
+
+  document
+    .getElementById("enBtn")
+    .classList.toggle(
+      "active",
+      lang === "en"
+    );
+
+
+  document
+    .getElementById("arBtn")
+    .classList.toggle(
+      "active",
+      lang === "ar"
+    );
+
+
+  document
+    .querySelectorAll("[data-text]")
+    .forEach(element=>{
+
+      const key =
+        element.dataset.text;
+
+
+      if(text[lang][key]){
+
+        element.textContent =
+          text[lang][key];
+
+      }
+
+    });
+
+
+  document.getElementById("search").placeholder =
+    text[lang].search;
+
+
+  updateAllergenGuide();
+
+  renderCategories();
+
+  renderMenu();
+
+  renderAllergenFallback();
+
+}
+
+
+
+/* =========================================================
+   CATEGORY BAR
+========================================================= */
+
+function renderCategories(){
+
+  const container =
+    document.getElementById("categories");
+
+
+  let html = `
+
+    <button
+
+      class="
+        category-btn
+        ${selectedCategory==="all" ? "active" : ""}
+      "
+
+      onclick="selectCategory('all')"
+
+    >
+
+      ${text[language].all}
+
+    </button>
+
+  `;
+
+
+  categoryData.forEach(category=>{
+
+    html += `
+
+      <button
+
+        class="
+          category-btn
+          ${selectedCategory===category.id ? "active" : ""}
+        "
+
+        onclick="
+          selectCategory('${category.id}')
+        "
+
+      >
+
+        ${category[language]}
+
+      </button>
+
+    `;
+
+  });
+
+
+  container.innerHTML =
+    html;
+
+}
+
+
+
+/* =========================================================
+   CATEGORY ARROW SCROLL
+========================================================= */
+
+function scrollCategories(direction){
+
+  const container =
+    document.getElementById("categories");
+
+
+  container.scrollBy({
+
+    left:
+      direction * 360,
+
+    behavior:
+      "smooth"
+
+  });
+
+}
+
+
+
+/* =========================================================
+   CATEGORY SELECTION
+========================================================= */
+
+function selectCategory(id){
+
+  selectedCategory =
+    id;
+
+
+  renderCategories();
+
+  renderMenu();
+
+
+  const main =
+    document.querySelector("main");
+
+
+  window.scrollTo({
+
+    top:
+      main.offsetTop - 140,
+
+    behavior:
+      "smooth"
+
+  });
+
+}
+
+
+
+/* =========================================================
+   SAFE TEXT
+========================================================= */
+
+function safe(value){
+
+  if(!value){
+
+    return "";
+
+  }
+
+
+  return String(value)
+
+    .replaceAll("&","&amp;")
+
+    .replaceAll("<","&lt;")
+
+    .replaceAll(">","&gt;")
+
+    .replaceAll('"',"&quot;");
+
+}
+
+
+
+/* =========================================================
+   RENDER MENU
+========================================================= */
+
+function renderMenu(){
+
+  const container =
+    document.getElementById("menu");
+
+
+  const search =
+    document
+      .getElementById("search")
+      .value
+      .trim()
+      .toLowerCase();
+
+
+  const visibleCategories =
+
+    selectedCategory === "all"
+
+      ? categoryData
+
+      : categoryData.filter(
+          category =>
+            category.id === selectedCategory
+        );
+
+
+  let html = "";
+
+  let total = 0;
+
+
+
+  visibleCategories.forEach(category=>{
+
+
+    const dishes =
+
+      menuData.filter(item=>{
+
+
+        if(
+          item.category !== category.id
+        ){
+
+          return false;
+
+        }
+
+
+        const searchable = [
+
+          item.name?.[language],
+
+          item.description?.[language],
+
+          item.note?.[language],
+
+          item.price,
+
+          item.calories
+
+        ]
+
+        .filter(Boolean)
+
+        .join(" ")
+
+        .toLowerCase();
+
+
+        return (
+
+          !search ||
+
+          searchable.includes(search)
+
+        );
+
+      });
+
+
+
+    if(!dishes.length){
+
+      return;
+
+    }
+
+
+
+    total +=
+      dishes.length;
+
+
+
+    html += `
+
+      <section
+        class="section"
+        id="${category.id}"
+      >
+
+
+        <div class="section-heading">
+
+
+          <h2>
+            ${category[language]}
+          </h2>
+
+
+          <span>
+
+            ${dishes.length}
+
+            ${text[language].items}
+
+          </span>
+
+
+        </div>
+
+
+
+        <div class="menu-grid">
+
+    `;
+
+
+
+    dishes.forEach(item=>{
+
+
+      const featuredClass =
+
+        item.category === "bbq-set"
+
+          ? "featured-card"
+
+          : "";
+
+
+      html += `
+
+        <article
+          class="card ${featuredClass}"
+        >
+
+
+          <div class="card-image">
+
+
+            <img
+
+              src="${item.image}"
+
+              alt="${safe(
+                item.name[language]
+              )}"
+
+              loading="lazy"
+
+            >
+
+
+          </div>
+
+
+
+          <div class="card-content">
+
+
+            <div class="card-top">
+
+
+              <h3>
+
+                ${safe(
+                  item.name[language]
+                )}
+
+              </h3>
+
+
+              <div class="price">
+
+                ${safe(
+                  item.price || ""
+                )}
+
+              </div>
+
+
+            </div>
+
+
+
+            ${
+              item.description?.[language]
+
+              ?
+
+              `
+
+              <p class="description">
+
+                ${safe(
+                  item.description[language]
+                )}
+
+              </p>
+
+              `
+
+              :
+
+              ""
+            }
+
+
+
+            <div class="meta">
+
+
+              ${
+                item.calories
+
+                ?
+
+                `
+
+                <span class="badge">
+
+                  ${safe(
+                    item.calories
+                  )}
+
+                </span>
+
+                `
+
+                :
+
+                ""
+              }
+
+
+
+              ${
+                item.note?.[language]
+
+                ?
+
+                `
+
+                <span class="badge special">
+
+                  ${safe(
+                    item.note[language]
+                  )}
+
+                </span>
+
+                `
+
+                :
+
+                ""
+              }
+
+
+
+              ${
+                item.indicator
+
+                ?
+
+                `
+
+                <img
+
+                  class="menu-indicators"
+
+                  src="${item.indicator}"
+
+                  alt="${
+                    language === "en"
+
+                      ? "Food allergen and menu indicators"
+
+                      : "رموز مسببات الحساسية ومؤشرات الطبق"
+                  }"
+
+                  loading="lazy"
+
+                >
+
+                `
+
+                :
+
+                ""
+              }
+
+
+            </div>
+
+
+          </div>
+
+
+        </article>
+
+      `;
+
+    });
+
+
+
+    html += `
+
+        </div>
+
+      </section>
+
+    `;
+
+  });
+
+
+
+  if(!total){
+
+    html = `
+
+      <div class="empty">
+
+        ${
+          language === "en"
+
+            ? "No dishes found."
+
+            : "لم يتم العثور على أطباق."
+        }
+
+      </div>
+
+    `;
+
+  }
+
+
+
+  container.innerHTML =
+    html;
+
+}
+
+
+
+/* =========================================================
+   ALLERGEN GUIDE IMAGE
+========================================================= */
+
+function updateAllergenGuide(){
+
+  const image =
+    document.getElementById(
+      "allergenGuideImage"
+    );
+
+
+  const fallback =
+    document.getElementById(
+      "allergenFallback"
+    );
+
+
+  image.style.display =
+    "block";
+
+
+  fallback.style.display =
+    "none";
+
+
+  image.src =
+
+    language === "en"
+
+      ? "images/allergens-en.png"
+
+      : "images/allergens-ar.png";
+
+
+  image.alt =
+
+    language === "en"
+
+      ? "Koyee Food Allergens Guide"
+
+      : "دليل مسببات الحساسية من كويي";
+
+}
+
+
+
+/* =========================================================
+   IF ALLERGEN SCREENSHOT IS MISSING
+========================================================= */
+
+function showAllergenFallback(){
+
+  document
+    .getElementById(
+      "allergenGuideImage"
+    )
+    .style.display =
+      "none";
+
+
+  document
+    .getElementById(
+      "allergenFallback"
+    )
+    .style.display =
+      "grid";
+
+}
+
+
+
+/* =========================================================
+   FALLBACK ALLERGEN TEXT
+========================================================= */
+
+function renderAllergenFallback(){
+
+  const container =
+    document.getElementById(
+      "allergenFallback"
+    );
+
+
+  container.innerHTML =
+
+    allergenData[language]
+
+      .map(item=>`
+
+        <div>
+          ${safe(item)}
+        </div>
+
+      `)
+
+      .join("");
+
+}
+
+
+
+/* =========================================================
+   MOUSE-WHEEL CATEGORY SCROLL
+========================================================= */
+
+const categoryContainer =
+  document.getElementById("categories");
+
+
+categoryContainer.addEventListener(
+
+  "wheel",
+
+  function(event){
+
+
+    if(
+      Math.abs(event.deltaY) >
+      Math.abs(event.deltaX)
+    ){
+
+      event.preventDefault();
+
+
+      const directionFactor =
+
+        document.documentElement.dir === "rtl"
+
+          ? -1
+
+          : 1;
+
+
+      categoryContainer.scrollLeft +=
+
+        event.deltaY *
+        directionFactor;
+
+    }
+
+  },
+
+  {
+    passive:false
+  }
+
+);
+
+
+
+/* =========================================================
+   START WEBSITE
+
+   Using setLanguage() on first load also fixes the
+   Service Promise descriptions that were previously blank.
+========================================================= */
+
+setLanguage("en");
+
+
+</script>
+
+
+</body>
+
+</html>
